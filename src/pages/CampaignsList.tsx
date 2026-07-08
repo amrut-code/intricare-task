@@ -155,7 +155,7 @@ export const CampaignsList: React.FC = () => {
           {/* Filter and Actions Bar */}
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between dark:border-zinc-800 dark:bg-zinc-900">
             {/* Dropdown Filters */}
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2 ">
               {/* Channel Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger className="inline-flex items-center justify-center gap-1.5 h-9 rounded-lg border border-slate-200 bg-white px-3 text-xs font-light text-txprm hover:bg-slate-50 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300 cursor-pointer">

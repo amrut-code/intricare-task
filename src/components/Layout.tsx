@@ -18,7 +18,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         <Header />
 
         {/* Content Body */}
-        <main className="overflow-y-auto mx-5 mt-5 mb-2 scrollbar-hidden  p-5 bg-white shadow rounded dark:bg-zinc-950">
+        <main className="overflow-y-auto mx-5 mt-5 mb-2 scrollbar-hidden  p-5 bg-white shadow rounded dark:border-zinc-950 dark:bg-zinc-900">
           {children}
         </main>
       </div>

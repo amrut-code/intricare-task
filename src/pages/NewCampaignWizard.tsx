@@ -4,8 +4,6 @@ import {
   ChevronRight,
   Linkedin,
   UploadCloud,
-  Compass,
-  Webhook,
   Trash2,
   Search,
   FileText,
@@ -18,8 +16,8 @@ import {
   Info,
   ListCheck,
   Settings,
-  LucideLayoutDashboard,
   List,
+  Calendar,
 } from "lucide-react";
 import { Button } from "../components/ui/button";
 import { Card } from "../components/ui/card";
@@ -102,7 +100,7 @@ export const NewCampaignWizard: React.FC = () => {
     {
       label: "Stats",
       number: "04",
-      icon: <LucideLayoutDashboard className="stroke-[.9] w-5 h-5" />,
+      icon: <Calendar className="stroke-[.9] w-5 h-5" />,
       active: false,
     },
   ];
@@ -118,19 +116,19 @@ export const NewCampaignWizard: React.FC = () => {
       id: "csv_upload",
       title: "Upload CSV File",
       description: "Upload linkedin profiles via CSV. Download Sample",
-      icon: UploadCloud,
+      icon: Calendar,
     },
     {
       id: "lookalike",
       title: "Lookalike Audience",
       description: "Use Lead Finder to find audience.",
-      icon: Compass,
+      icon: User,
     },
     {
       id: "webhook",
       title: "Inbound Webhook",
       description: "Sync leads from zapier, n8n make in real time",
-      icon: Webhook,
+      icon: Linkedin,
     },
   ];
 

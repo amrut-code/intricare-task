@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { Layout } from "./components/Layout";
 import { CampaignsList } from "./pages/CampaignsList";
 import { NewCampaignWizard } from "./pages/NewCampaignWizard";
+import { useThemeStore } from "./store/useThemeStore";
 
 const App: React.FC = () => {
+  const initTheme = useThemeStore((state) => state.initTheme);
+
+  useEffect(() => {
+    initTheme();
+  }, [initTheme]);
+
   return (
     <Layout>
       <Routes>
