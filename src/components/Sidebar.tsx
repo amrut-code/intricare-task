@@ -180,7 +180,7 @@ export const Sidebar: React.FC = () => {
             "grid gap-1 rounded-full bg-slate-100 p-1 dark:bg-zinc-800",
             isCollapsed
               ? "grid-cols-1 w-10 h-20 mx-auto"
-              : "grid-cols-1 lg:grid-cols-2 w-full",
+              : "grid-cols-1 w-10 h-20 mx-auto lg:grid-cols-2 lg:w-full lg:h-auto lg:mx-0",
           )}
         >
           <button
@@ -194,7 +194,7 @@ export const Sidebar: React.FC = () => {
                 : "text-txco3 hover:text-slate-700 dark:text-zinc-400 dark:hover:text-zinc-200",
               isCollapsed
                 ? "w-8 h-8"
-                : "py-1 text-sm font-light px-0 lg:px-2 lg:gap-2",
+                : "w-8 h-8 lg:w-auto lg:h-auto lg:py-1.5 lg:text-sm lg:font-light lg:px-2 lg:gap-2",
             )}
             title="Light Theme"
           >
@@ -214,7 +214,7 @@ export const Sidebar: React.FC = () => {
                 : "text-txco3 hover:text-slate-700 dark:text-zinc-400 dark:hover:text-zinc-200",
               isCollapsed
                 ? "w-8 h-8"
-                : "py-1 text-sm font-light px-0 lg:px-2 lg:gap-2",
+                : "w-8 h-8 lg:w-auto lg:h-auto lg:py-1.5 lg:text-sm lg:font-light lg:px-2 lg:gap-2",
             )}
             title="Dark Theme"
           >

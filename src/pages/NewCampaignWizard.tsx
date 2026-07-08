@@ -268,7 +268,7 @@ export const NewCampaignWizard: React.FC = () => {
 
             {/* Accordion Header Trigger */}
             <AccordionTrigger className="hover:no-underline flex items-center justify-between  border border-slate-200 p-5 dark:border-zinc-800 text-md text-txprm dark:bg-zinc-900 dark:text-white font-montserrat tracking-tight cursor-pointer rounded-md bg-white">
-              <div className="flex items-center gap-2">
+              <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:gap-2">
                 <span>
                   {selectedMethod === "csv_upload" &&
                   csvUploadState === "mapped"
@@ -439,12 +439,10 @@ export const NewCampaignWizard: React.FC = () => {
                   </Button>
                 </div>
 
-                <p className="flex items-center gap-1 pl-2 text-[11px] text-txprm/70 font-normal font-montserrat">
-                  <div className="h-1.5 w-1.5 bg-primary text-primary rounded-full">
-                    .
-                  </div>
-                  Paste the search URL directly from LinkedIn
-                </p>
+                <div className="flex items-start gap-1.5 pl-2 text-[11px] text-txprm/70 font-normal font-montserrat mt-2">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
+                  <span>Paste the search URL directly from LinkedIn</span>
+                </div>
               </AccordionContent>
             </AccordionItem>
           )}
@@ -472,7 +470,7 @@ export const NewCampaignWizard: React.FC = () => {
 
                 {/* Header */}
                 <AccordionTrigger className="hover:no-underline flex items-center justify-between border  dark:bg-zinc-900 border-slate-200 p-5 dark:border-zinc-800 text-md text-txprm dark:text-white font-montserrat tracking-tight cursor-pointer rounded-md bg-white">
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:gap-2">
                     <span>Upload CSV File</span>
                     <span className="text-[11px] text-txprm font-medium bg-[#f8f8f8] dark:bg-zinc-800 dark:text-zinc-500  px-3 py-0.5 rounded">
                       Step 1 of 2
@@ -525,7 +523,7 @@ export const NewCampaignWizard: React.FC = () => {
                   </div>
 
                   {/* Mapping Container Card */}
-                  <Card className="border border-slate-100 dark:border-zinc-800 dark:bg-zinc-900 overflow-hidden rounded bg-white p-6 mt-4">
+                  <Card className="border border-slate-100 dark:border-zinc-800 dark:bg-zinc-900 overflow-hidden rounded bg-white p-4 sm:p-6 mt-4">
                     {/* Panel Header */}
                     <div className="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-zinc-800 mb-2">
                       <div className="space-y-1">
@@ -605,17 +603,17 @@ export const NewCampaignWizard: React.FC = () => {
                         </div>
 
                         {/* Items list */}
-                        <div className="flex-1 space-y-2 overflow-y-auto px-3">
+                        <div className="flex-1 space-y-2 overflow-y-auto px-2 sm:px-3">
                           {filteredUnmapped.map((item, idx) => (
                             <div
                               key={idx}
-                              className="bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 rounded p-3 flex items-center justify-between text-sm font-normal text-txprm dark:text-zinc-300 font-montserrat"
+                              className="bg-white dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 rounded p-2 sm:p-3 flex items-center justify-between text-xs sm:text-sm font-normal text-txprm dark:text-zinc-300 font-montserrat"
                             >
-                              <div className="flex items-center gap-2">
-                                <List className=" stroke-[.8]" />
-                                <span>{item.name}</span>
+                              <div className="flex items-center gap-1.5 min-w-0">
+                                <List className="h-4 w-4 text-slate-400 dark:text-zinc-500 shrink-0 stroke-[1.2]" />
+                                <span className="whitespace-nowrap truncate">{item.name}</span>
                               </div>
-                              <span className="text-sm font-normal text-txprm">
+                              <span className="text-xs sm:text-sm font-normal text-txprm shrink-0">
                                 ({item.count})
                               </span>
                             </div>
@@ -712,7 +710,7 @@ export const NewCampaignWizard: React.FC = () => {
                           <div className="h-9 w-9 bg-[#F4F5F8] text-txco3 rounded-xl flex items-center justify-center">
                             <List className="h-5 w-5 stroke-[1.8]" />
                           </div>
-                          <div className="flex justify-start items-center gap-2 space-y-0.5">
+                          <div className="flex flex-col items-start sm:flex-row sm:items-center gap-1 sm:gap-2">
                             <span className="text-sm font-semibold text-txco3 font-montserrat">
                               {list.name}
                             </span>

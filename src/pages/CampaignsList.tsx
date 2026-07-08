@@ -223,7 +223,7 @@ export const CampaignsList: React.FC = () => {
           {/* Campaigns Table */}
           <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse text-left text-sm text-slate-500 dark:text-zinc-400">
+              <table className="w-full min-w-[1000px] border-collapse text-left text-sm text-slate-500 dark:text-zinc-400">
                 <thead className="bg-[#F3F2F7] text-xs font-medium uppercase tracking-wider text-txprm border-b border-slate-200 dark:bg-zinc-800/50 dark:text-zinc-400 dark:border-zinc-800">
                   <tr>
                     <th className="px-4 py-2.5 w-12">
@@ -365,14 +365,18 @@ export const CampaignsList: React.FC = () => {
                                 : "bg-amber-50 text-amber-700 dark:bg-amber-950/20 dark:text-amber-400"
                             }`}
                           >
-                            <img src="/images/pause.png" />
+                            {campaign.status === "Running" ? (
+                              <span className="h-1.5 w-1.5 rounded-full bg-[#549A75] dark:bg-green-400 animate-pulse" />
+                            ) : (
+                              <img src="/images/pause.png" />
+                            )}
 
                             {campaign.status}
                           </span>
                         </td>
                         {/* Daily Limit */}
                         <td className="px-3 py-5">
-                          <span className="text-xs font-normal text-txprm dark:text-zinc-300 rounded-md border border-slate-200 px-2 py-1">
+                          <span className="inline-flex items-center justify-center whitespace-nowrap text-xs font-normal text-txprm dark:text-zinc-300 rounded-md border border-slate-200 px-2 py-1">
                             {campaign.dailyLimit} Invites/day
                           </span>
                         </td>
