@@ -63,7 +63,7 @@ export const Header: React.FC = () => {
             </p>
           </div>
           <Avatar className="h-8 w-8 border border-slate-200 dark:border-zinc-700">
-            <AvatarImage src="/public/images/avtar.png" />{" "}
+            <AvatarImage src="/images/avtar.png" />{" "}
             <AvatarFallback>
               <User className="h-4.5 w-4.5" />
             </AvatarFallback>

@@ -33,7 +33,7 @@ export const Sidebar: React.FC = () => {
         <div className="flex items-center gap-2.5">
           <div className="flex h-9 w-9 items-center justify-cente dark:bg-prirmary shrink-0">
             <img
-              src="/public/images/logo.png"
+              src="/images/logo.png"
               alt="Logo"
               className="h-8 w-8 object-contain"
             />
@@ -94,7 +94,7 @@ export const Sidebar: React.FC = () => {
           )}
         >
           <img
-            src="/public/images/icon-1.png"
+            src="/images/icon-1.png"
             alt="Campaign Icon"
             className="h-4.5 w-4.5 shrink-0"
           />
@@ -127,7 +127,7 @@ export const Sidebar: React.FC = () => {
             )}
           >
             <Avatar className="h-10 w-10 border border-slate-200 dark:border-zinc-700 shrink-0">
-              <AvatarImage src="/public/images/avtar.png" />
+              <AvatarImage src="/images/avtar.png" />
               <AvatarFallback>
                 <User className="h-5 w-5" />
               </AvatarFallback>

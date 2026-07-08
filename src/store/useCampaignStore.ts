@@ -45,11 +45,11 @@ const INITIAL_CAMPAIGNS: Campaign[] = [
     senders: [
       {
         name: "John Doe",
-        avatarUrl: "/public/images/avtar2.jpg",
+        avatarUrl: "/images/avtar2.jpg",
       },
       {
         name: "Jane Smith",
-        avatarUrl: "/public/images/avtar3.jpg",
+        avatarUrl: "/images/avtar3.jpg",
       },
     ],
     status: "Running",
@@ -73,11 +73,11 @@ const INITIAL_CAMPAIGNS: Campaign[] = [
     senders: [
       {
         name: "Alex Johnson",
-        avatarUrl: "/public/images/avtar2.jpg",
+        avatarUrl: "/images/avtar2.jpg",
       },
       {
         name: "Maria Garcia",
-        avatarUrl: "/public/images/avtar3.jpg",
+        avatarUrl: "/images/avtar3.jpg",
       },
     ],
     status: "Running",
@@ -101,11 +101,11 @@ const INITIAL_CAMPAIGNS: Campaign[] = [
     senders: [
       {
         name: "Robert Lee",
-        avatarUrl: "/public/images/avtar2.jpg",
+        avatarUrl: "/images/avtar2.jpg",
       },
       {
         name: "Sarah Connor",
-        avatarUrl: "/public/images/avtar3.jpg",
+        avatarUrl: "/images/avtar3.jpg",
       },
     ],
     status: "Running",
@@ -129,11 +129,11 @@ const INITIAL_CAMPAIGNS: Campaign[] = [
     senders: [
       {
         name: "Sarah Connor",
-        avatarUrl: "/public/images/avtar2.jpg",
+        avatarUrl: "/images/avtar2.jpg",
       },
       {
         name: "John Connor",
-        avatarUrl: "/public/images/avtar3.jpg",
+        avatarUrl: "/images/avtar3.jpg",
       },
     ],
     status: "Running",
@@ -157,11 +157,11 @@ const INITIAL_CAMPAIGNS: Campaign[] = [
     senders: [
       {
         name: "Emma Watson",
-        avatarUrl: "/public/images/avtar2.jpg",
+        avatarUrl: "/images/avtar2.jpg",
       },
       {
         name: "Sarah Connor",
-        avatarUrl: "/public/images/avtar3.jpg",
+        avatarUrl: "/images/avtar3.jpg",
       },
     ],
     status: "Running",
@@ -194,7 +194,7 @@ export const useCampaignStore = create<CampaignStore>((set) => ({
       senders: [
         {
           name: "John Doe",
-          avatarUrl: "/public/images/avtar2.jpg",
+          avatarUrl: "/images/avtar2.jpg",
         },
       ],
       status: "Running",

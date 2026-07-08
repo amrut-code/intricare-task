@@ -288,7 +288,7 @@ export const CampaignsList: React.FC = () => {
                             <div className="flex flex-col">
                               <span className="flex items-center text-sm font-semibold text-txprm dark:text-zinc-300">
                                 <span className="relative flex h-4">
-                                  <img src="/public/images/image-1.png" />
+                                  <img src="/images/image-1.png" />
                                 </span>
                                 {campaign.crmSynced}
                               </span>
@@ -365,7 +365,7 @@ export const CampaignsList: React.FC = () => {
                                 : "bg-amber-50 text-amber-700 dark:bg-amber-950/20 dark:text-amber-400"
                             }`}
                           >
-                            <img src="/public/images/pause.png" />
+                            <img src="/images/pause.png" />
 
                             {campaign.status}
                           </span>
@@ -444,7 +444,7 @@ export const CampaignsList: React.FC = () => {
         </>
       ) : (
         <div className="py-20 w-full flex flex-col justify-center items-center">
-          <img src="/public/images/OBJECT.png" />
+          <img src="/images/OBJECT.png" />
           <GradientButton className="mt-6" onClick={() => setIsModalOpen(true)}>
             New Campaign
           </GradientButton>
@@ -514,7 +514,7 @@ export const CampaignsList: React.FC = () => {
               {/* Advanced UI Illustration */}
               <div className="hidden sm:block">
                 <img
-                  src="/public/images/image-2.png"
+                  src="/images/image-2.png"
                   className="h-14 w-auto object-contain"
                   alt="Advanced Workflow"
                 />
@@ -564,7 +564,7 @@ export const CampaignsList: React.FC = () => {
               {/* Standard UI Illustration */}
               <div className="hidden sm:block">
                 <img
-                  src="/public/images/image-3.png"
+                  src="/images/image-3.png"
                   className="h-14 w-auto object-contain"
                   alt="Standard Workflow"
                 />
