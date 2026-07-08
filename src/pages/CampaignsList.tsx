@@ -359,18 +359,13 @@ export const CampaignsList: React.FC = () => {
                         {/* Status */}
                         <td className="px-3 py-5">
                           <span
-                            className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs ${
+                            className={`inline-flex items-center gap-1 rounded font-medium px-2 py-1 text-xs whitespace-nowrap ${
                               campaign.status === "Running"
-                                ? "bg-green-50 text-[#549A75] dark:bg-#E5F8EE dark:text-green-400"
+                                ? "bg-green-50 text-[#549A75] dark:bg-[#E5F8EE] dark:text-green-400"
                                 : "bg-amber-50 text-amber-700 dark:bg-amber-950/20 dark:text-amber-400"
                             }`}
                           >
-                            {campaign.status === "Running" ? (
-                              <span className="h-1.5 w-1.5 rounded-full bg-[#549A75] dark:bg-green-400 animate-pulse" />
-                            ) : (
-                              <img src="/images/pause.png" />
-                            )}
-
+                            <img src="/images/pause.png" />
                             {campaign.status}
                           </span>
                         </td>
