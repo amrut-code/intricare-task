@@ -167,6 +167,7 @@ export const NewCampaignWizard: React.FC = () => {
 
   const handleCsvUpload = () => {
     setCsvUploadState("mapped");
+    setIsValidatedUrl(true);
     setOpenPanels([]);
   };
 
@@ -237,8 +238,14 @@ export const NewCampaignWizard: React.FC = () => {
       {/* Accordion container & Left Timeline line */}
       <div className="relative pl-0 sm:pl-8 text-left">
         {/* Left vertical timeline line */}
-        <div className="hidden sm:block absolute left-[10px] top-6 bottom-0 w-[1.5px] bg-[#E6E6F0] dark:bg-zinc-800"></div>
-
+        {isValidatedUrl ? (
+          <div className="hidden  absolute -ml-7 mt-6 h-4 w-4  border-2 border-[#10B981] z-10 rounded-full bg-[#10B981] text-white sm:flex items-center justify-center shadow-sm">
+            <Check className="h-3.5 w-3.5 stroke-[3.5]" />
+          </div>
+        ) : (
+          <div className="hidden  absolute -ml-7 mt-6 h-4 w-4  border-2 border-[#3666EE] bg-white rounded-full z-10 sm:flex items-center justify-center dark:bg-zinc-950"></div>
+        )}
+        <div className="hidden sm:block absolute left-[10px] top-1 bottom-0 w-[3px] bg-primary/20 dark:bg-zinc-800"></div>
         <Accordion
           multiple
           value={openPanels}
@@ -369,18 +376,16 @@ export const NewCampaignWizard: React.FC = () => {
           {selectedMethod === "linkedin_search" && (
             <AccordionItem
               value="linkedin-url"
-              className="relative  dark:border-zinc-800 dark:bg-zinc-900 overflow-hidden border-none"
+              className="relative  dark:border-zinc-800 dark:bg-zinc-900 border-none"
             >
               {/* Left timeline dot */}
-              <div className="hidden sm:block absolute -left-[31px] top-[18px] z-10">
+              <div className="hidden sm:block absolute -left-[29px] top-[18px] z-10">
                 {isValidatedUrl ? (
-                  <div className="h-[18px] w-[18px] rounded-full bg-[#10B981] text-white flex items-center justify-center shadow-sm">
+                  <div className="h-4 w-4 rounded-full bg-[#10B981] text-white flex items-center justify-center shadow-sm">
                     <Check className="h-3.5 w-3.5 stroke-[3.5]" />
                   </div>
                 ) : (
-                  <div className="h-[18px] w-[18px] rounded-full border-2 border-[#3666EE] bg-white flex items-center justify-center dark:bg-zinc-950">
-                    <div className="h-1.5 w-1.5 rounded-full bg-[#3666EE]" />
-                  </div>
+                  <div className="h-4 w-4 rounded-full border-2 border-[#3666EE] bg-white flex items-center justify-center dark:bg-zinc-950"></div>
                 )}
               </div>
 
@@ -453,18 +458,16 @@ export const NewCampaignWizard: React.FC = () => {
               {/* Timeline segment: File Upload trigger / Mapping screen */}
               <AccordionItem
                 value="csv-upload"
-                className="relative  dark:border-zinc-800 dark:bg-zinc-900 overflow-hidden border-none"
+                className="relative  dark:border-zinc-800 dark:bg-zinc-900 border-none"
               >
                 {/* Left timeline dot */}
-                <div className="hidden sm:block absolute -left-[31px] top-[18px] z-10">
+                <div className="hidden sm:block absolute -left-[29px] top-[18px] z-10">
                   {csvUploadState === "mapped" ? (
-                    <div className="h-[18px] w-[18px] rounded-full bg-[#10B981] text-white flex items-center justify-center shadow-sm">
+                    <div className="h-4 w-4 rounded-full bg-[#10B981] text-white flex items-center justify-center shadow-sm">
                       <Check className="h-3.5 w-3.5 stroke-[3.5]" />
                     </div>
                   ) : (
-                    <div className="h-[18px] w-[18px] rounded-full border-2 border-[#3666EE] bg-white flex items-center justify-center dark:bg-zinc-950">
-                      <div className="h-1.5 w-1.5 rounded-full bg-[#3666EE]" />
-                    </div>
+                    <div className="h-4 w-4 rounded-full border-2 border-[#3666EE] bg-white flex items-center justify-center dark:bg-zinc-950"></div>
                   )}
                 </div>
 
@@ -516,11 +519,9 @@ export const NewCampaignWizard: React.FC = () => {
               {csvUploadState === "mapped" && (
                 <div className="relative">
                   {/* Left timeline dot */}
-                  <div className="hidden sm:block absolute -left-[31px] top-[18px] z-10">
-                    <div className="h-[18px] w-[18px] rounded-full border-2 border-[#3666EE] bg-white flex items-center justify-center dark:bg-zinc-950">
-                      <div className="h-1.5 w-1.5 rounded-full bg-[#3666EE]" />
-                    </div>
-                  </div>
+                  {/* <div className="hidden sm:block absolute -left-[29px] mt-4 top-[18px] z-10">
+                    <div className="h-4 w-4 rounded-full border-2 border-[#3666EE] bg-white flex items-center justify-center dark:bg-zinc-950"></div>
+                  </div> */}
 
                   {/* Mapping Container Card */}
                   <Card className="border border-slate-100 dark:border-zinc-800 dark:bg-zinc-900 overflow-hidden rounded bg-white p-4 sm:p-6 mt-4">
@@ -611,7 +612,9 @@ export const NewCampaignWizard: React.FC = () => {
                             >
                               <div className="flex items-center gap-1.5 min-w-0">
                                 <List className="h-4 w-4 text-slate-400 dark:text-zinc-500 shrink-0 stroke-[1.2]" />
-                                <span className="whitespace-nowrap truncate">{item.name}</span>
+                                <span className="whitespace-nowrap truncate">
+                                  {item.name}
+                                </span>
                               </div>
                               <span className="text-xs sm:text-sm font-normal text-txprm shrink-0">
                                 ({item.count})
